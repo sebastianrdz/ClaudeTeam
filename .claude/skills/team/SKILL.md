@@ -50,6 +50,7 @@ Break the mission into packages, each with:
 | Specs / research / roadmap | `product-lead` | `market-researcher`, `spec-writer` |
 | Copy / SEO / launch | `marketing-lead` | `copywriter`, `seo-specialist` |
 | Pricing / GTM / pitches | `sales-lead` | `pricing-strategist`, `pitch-writer` |
+| Legal / privacy / compliance | `legal-lead` | `legal-writer`, `compliance-auditor` |
 | Whole cross-team initiative in background | `master-orchestrator` | everyone |
 
 ### Rules

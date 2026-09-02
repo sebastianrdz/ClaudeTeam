@@ -15,6 +15,7 @@ flowchart TD
     MO --> PL[product-lead<br/><i>sonnet</i>]
     MO --> ML[marketing-lead<br/><i>sonnet</i>]
     MO --> SL[sales-lead<br/><i>sonnet</i>]
+    MO --> LL[legal-lead<br/><i>sonnet</i>]
 
     FE --> re[react-engineer] & us[ui-stylist<br/><i>haiku</i>]
     BE --> ae[api-engineer] & de[db-engineer]
@@ -25,6 +26,7 @@ flowchart TD
     PL --> mr[market-researcher] & sw[spec-writer]
     ML --> cw[copywriter] & se[seo-specialist]
     SL --> ps[pricing-strategist] & pw[pitch-writer]
+    LL --> lw[legal-writer<br/><i>haiku</i>] & ca[compliance-auditor<br/><i>haiku</i>]
 ```
 
 Specialists are `sonnet` unless marked.
@@ -60,9 +62,9 @@ Every lead's prompt handles both cases, so the same repo works across environmen
 ```
 ClaudeTeam/
 ├── .claude/
-│   ├── agents/claude-team/      # 29 agents, grouped by team
+│   ├── agents/claude-team/      # 32 agents, grouped by team
 │   │   ├── master-orchestrator.md
-│   │   ├── engineering/  design/  product/  marketing/  sales/
+│   │   ├── engineering/  design/  product/  marketing/  sales/  legal/
 │   └── skills/
 │       ├── team/SKILL.md        # /team — the orchestration protocol
 │       ├── retro/SKILL.md       # /retro — learn & patch the org

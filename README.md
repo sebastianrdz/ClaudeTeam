@@ -1,6 +1,6 @@
 # Claude Team
 
-A portable library of Claude Code **agents, skills, and orchestration practices** — a full virtual company you install next to any project. A Master Orchestrator (CEO) on your strongest model coordinates nine Sonnet team leads, who manage 19 specialists, with model tiering, retro loops, and token discipline built in.
+A portable library of Claude Code **agents, skills, and orchestration practices** — a full virtual company you install next to any project. A Master Orchestrator (CEO) on your strongest model coordinates ten Sonnet team leads, who manage 21 specialists, with model tiering, retro loops, and token discipline built in.
 
 **The goal:** better results, more consistency, lower token spend, and a repeatable path from idea → built → shipped → sold.
 
@@ -12,6 +12,7 @@ A portable library of Claude Code **agents, skills, and orchestration practices*
 - **Product** — product-lead + market-researcher, spec-writer.
 - **Marketing** — marketing-lead + copywriter, seo-specialist.
 - **Sales/GTM** — sales-lead + pricing-strategist, pitch-writer.
+- **Legal** — legal-lead + legal-writer, compliance-auditor.
 
 Full chart and flow: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Model tiering & token rules: [docs/MODEL-STRATEGY.md](docs/MODEL-STRATEGY.md). MCP wiring: [docs/INTEGRATIONS.md](docs/INTEGRATIONS.md).
 
