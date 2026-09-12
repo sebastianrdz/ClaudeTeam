@@ -5,7 +5,7 @@
 | Layer | Model | Why |
 |---|---|---|
 | Master Orchestrator | `inherit` (your session model — Fable or Opus) | Decomposition, judgment, and final review are where the top model pays for itself. `inherit` means it automatically uses the best model you're running. |
-| Team leads (9) | `sonnet` | Planning, briefing, and reviewing scoped work is squarely Sonnet territory — near-Opus quality on structured tasks at a fraction of the cost. |
+| Team leads (10) | `sonnet` | Planning, briefing, and reviewing scoped work is squarely Sonnet territory — near-Opus quality on structured tasks at a fraction of the cost. |
 | Specialists | `sonnet` (default) | Real engineering/writing/analysis against a precise brief. |
 | Mechanical specialists | `haiku` (`ui-stylist`; override others per task) | Precisely-specified execution — token-exact and fast. |
 
@@ -28,6 +28,7 @@ The Master Orchestrator's rule of thumb: **pay for judgment, not for typing.**
 6. **Bounded retro loops.** Max 3 revisions, then escalate. Also: one good review pass is cheaper than three blind revision loops.
 7. **Restricted toolsets** for reviewers/researchers (read-only) keep them from wandering into expensive side quests.
 8. **Parallelize independent packages** — same tokens, much less wall-clock time.
+9. **One craft skill per task.** The design stack (`impeccable`, `design-taste-frontend`, the Emil pack) is large. Load the single skill `docs/DESIGN-SKILLS.md` routes the job to — never the whole stack "to be safe".
 
 ## Cost intuition
 

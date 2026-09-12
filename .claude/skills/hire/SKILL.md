@@ -12,6 +12,7 @@ Create a new agent definition from the role in `$ARGUMENTS` (or ask what role if
 - **Team & manager**: which lead does this report to (engineering/design/product/marketing/sales — or is it a new lead)? Check the existing roster in `.claude/agents/claude-team/` to avoid overlap; if an existing agent already covers 80% of the role, say so and propose extending it instead.
 - **Model tier**: `haiku` for mechanical/precisely-specified work, `sonnet` for real engineering/writing/analysis (the default), `opus`/`inherit` only for orchestration or genuinely hard reasoning. Justify the choice.
 - **Tools**: omit `tools:` for builders (all tools); restrict to read/search/web for reviewers and researchers.
+- **Craft skills**: if the role touches UI, motion, or design, do not invent a skill routing for it — take it from `docs/DESIGN-SKILLS.md` and add the new agent to that file's routing table in the same change.
 
 ## 2. Write the definition (house format)
 

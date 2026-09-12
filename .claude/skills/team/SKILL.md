@@ -33,6 +33,7 @@ Break the mission into packages, each with:
 - **Context Brief** — from Step 1, plus package-specific pointers.
 - **Constraints** — conventions, files not to touch, scope limits.
 - **Acceptance criteria** — objectively checkable ("tests pass", "matches Figma node X", "lint clean").
+- **Craft directive** (UI packages only) — the one craft skill the package is built under, from `docs/DESIGN-SKILLS.md` (e.g. "`impeccable polish` on `src/app/settings/`; motion review required"). Never name two direction-setting skills for one surface.
 - **Output contract** — what the agent must return (see below).
 
 ## Step 3 — Delegate
@@ -41,7 +42,7 @@ Break the mission into packages, each with:
 
 | Package type | Spawn (`subagent_type`) | Their specialists |
 |---|---|---|
-| UI / components / styling | `frontend-lead` | `react-engineer`, `ui-stylist` |
+| UI / components / styling | `frontend-lead` | `react-engineer`, `motion-engineer`, `ui-stylist` |
 | APIs / services / DB | `backend-lead` | `api-engineer`, `db-engineer` |
 | CI/CD / infra / deploy | `devops-lead` | `ci-cd-engineer`, `infra-engineer` |
 | Testing / review / quality | `qa-lead` | `test-engineer`, `e2e-tester`, `code-reviewer` |
@@ -85,6 +86,7 @@ Final message to the user, leading with the outcome:
 
 ## Integrations cheat-sheet
 
+- **Design craft stack** → `impeccable` (product surfaces), `design-taste-frontend` (landing pages/portfolios), the Emil pack (`emil-design-eng`, `animate`, `apple-design`, `review-animations`…). Routing table and collision rules: **`docs/DESIGN-SKILLS.md`** — read it before briefing any UI package, and name the craft skill in the brief. One skill per task; the stack is large and loading it wholesale is the most expensive mistake available.
 - **Figma MCP** → design & frontend agents (load the mandatory `figma-*` skills before Figma tool calls).
 - **Playwright MCP** → `e2e-tester`, `qa-lead`.
 - **WebSearch/WebFetch** → research agents.

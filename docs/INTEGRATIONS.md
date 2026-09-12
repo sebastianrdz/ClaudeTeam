@@ -10,6 +10,9 @@ Which MCP servers / plugins each team uses, and what needs action from you.
 | **Playwright MCP** (plugin) | e2e-tester, qa-lead, ux-researcher | Browser automation for E2E verification and UI audits. |
 | **WebSearch / WebFetch** (built-in) | market-researcher, seo-specialist, pricing-strategist, ux-researcher | Research backbone. |
 | **graphify** (skill, `~/.claude/skills/graphify`) | Master Orchestrator context bootstrap | Run `/graphify` once per project you work on repeatedly; the team queries the graph instead of re-reading files. |
+| **Impeccable** (skill + 4 agents, user-level) | design-lead, frontend-lead, ui-designer, ux-researcher, qa-lead | Whole-surface design engine (`shape`, `polish`, `critique`, `audit`, `document`…). Routing: `docs/DESIGN-SKILLS.md`. |
+| **Emil design-engineering pack** (skills, user-level) | motion-engineer, react-engineer, frontend-lead, code-reviewer | `emil-design-eng`, `animate`, `animate-expo`, `apple-design`, `review-animations`, `improve-animations`, `ask-sonner`, `pick-ui-library`, `prototype`. |
+| **Tasteskill family** (13 skills, user-level) | marketing-lead, frontend-lead, ui-designer | `design-taste-frontend` is the only auto-routed one. Style presets (`minimalist-ui`, `industrial-brutalist-ui`, `high-end-visual-design`, `gpt-taste`) are **user-pinned only**; `stitch-design-taste` is quarantined (it overwrites Impeccable's `DESIGN.md`). See `docs/DESIGN-SKILLS.md`. |
 
 ## ⚠️ Needs your authorization (follow-up requirements)
 

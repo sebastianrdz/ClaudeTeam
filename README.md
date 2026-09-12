@@ -1,20 +1,36 @@
 # Claude Team
 
-A portable library of Claude Code **agents, skills, and orchestration practices** — a full virtual company you install next to any project. A Master Orchestrator (CEO) on your strongest model coordinates ten Sonnet team leads, who manage 21 specialists, with model tiering, retro loops, and token discipline built in.
+A portable library of Claude Code **agents, skills, and orchestration practices** — a full virtual company you install next to any project. A Master Orchestrator (CEO) on your strongest model coordinates ten Sonnet team leads, who manage 22 specialists, with model tiering, retro loops, and token discipline built in.
 
 **The goal:** better results, more consistency, lower token spend, and a repeatable path from idea → built → shipped → sold.
 
 ## The org
 
 - **Master Orchestrator** (`inherit` → Fable/Opus) — triage, decomposition, acceptance, synthesis.
-- **Engineering** — frontend, backend, devops, qa, data leads + 11 specialists (react-engineer, api-engineer, db-engineer, ci-cd-engineer, infra-engineer, test-engineer, e2e-tester, code-reviewer, ui-stylist, data-analyst, ml-engineer).
+- **Engineering** — frontend, backend, devops, qa, data leads + 12 specialists (react-engineer, motion-engineer, api-engineer, db-engineer, ci-cd-engineer, infra-engineer, test-engineer, e2e-tester, code-reviewer, ui-stylist, data-analyst, ml-engineer).
 - **Design** — design-lead + ui-designer (Figma-native), ux-researcher.
 - **Product** — product-lead + market-researcher, spec-writer.
 - **Marketing** — marketing-lead + copywriter, seo-specialist.
 - **Sales/GTM** — sales-lead + pricing-strategist, pitch-writer.
 - **Legal** — legal-lead + legal-writer, compliance-auditor.
 
-Full chart and flow: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Model tiering & token rules: [docs/MODEL-STRATEGY.md](docs/MODEL-STRATEGY.md). MCP wiring: [docs/INTEGRATIONS.md](docs/INTEGRATIONS.md).
+Full chart and flow: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Model tiering & token rules: [docs/MODEL-STRATEGY.md](docs/MODEL-STRATEGY.md). MCP wiring: [docs/INTEGRATIONS.md](docs/INTEGRATIONS.md). Design skill routing: [docs/DESIGN-SKILLS.md](docs/DESIGN-SKILLS.md).
+
+## The design craft stack
+
+UI work routes through three external skill packs so the team's frontend output clears a real
+craft bar instead of a templated one:
+
+| Pack | Owns | Routed to |
+|---|---|---|
+| [Impeccable](https://impeccable.style/designing/) | Whole product surfaces — direction, layout, type, color, a11y/perf audits | `design-lead`, `frontend-lead`, `ui-designer`, `qa-lead` |
+| [Emil Kowalski's pack](https://emilkowal.ski/skill) | Motion, gestures, component feel, library taste | `motion-engineer`, `react-engineer`, `code-reviewer` |
+| [Tasteskill](https://www.tasteskill.dev/) | Landing pages, portfolios, marketing redesigns | `marketing-lead` → `frontend-lead` |
+
+They overlap and would collide if every agent loaded all three, so routing lives in one place —
+[docs/DESIGN-SKILLS.md](docs/DESIGN-SKILLS.md). Every UI work package carries a **craft directive**
+naming the single skill it's built under, and QA gates on the matching audit (`impeccable audit`,
+`review-animations`).
 
 ## Install
 
@@ -70,3 +86,4 @@ Other skills:
 
 - Claude Code with subagents & skills support.
 - Optional but recommended: `graphify` skill, Figma MCP connector, Playwright MCP plugin. See [docs/INTEGRATIONS.md](docs/INTEGRATIONS.md) for connectors that need one-time authorization.
+- For the design craft stack: install [`impeccable`](https://impeccable.style/designing/), the [Emil pack](https://emilkowal.ski/skill), and [`design-taste-frontend`](https://www.tasteskill.dev/) at user level. Agents degrade gracefully without them — they fall back and list the missing skill as a follow-up rather than failing.

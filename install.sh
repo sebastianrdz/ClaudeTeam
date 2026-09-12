@@ -48,7 +48,7 @@ install_one() { # src dest label
 }
 
 echo "Installing Claude Team → $TARGET ($([[ $COPY -eq 1 ]] && echo copy || echo symlink))"
-install_one "$REPO_DIR/.claude/agents/claude-team" "$AGENTS_DEST" "agents (29)"
+install_one "$REPO_DIR/.claude/agents/claude-team" "$AGENTS_DEST" "agents (33)"
 for s in "${SKILLS[@]}"; do
   install_one "$REPO_DIR/.claude/skills/$s" "$TARGET/skills/$s" "skill /$s"
 done
@@ -56,3 +56,11 @@ done
 echo
 echo "Done. Start a new Claude Code session, then try:  /team <your mission>"
 [[ "$MODE" == "user" ]] && echo "(user-level install: the team is now available in every project)"
+
+# The design craft stack is external — installed separately, at user level.
+echo
+echo "Design craft stack (optional, recommended for UI work) — see docs/DESIGN-SKILLS.md:"
+for s in impeccable emil-design-eng animate design-taste-frontend; do
+  if [[ -e "$HOME/.claude/skills/$s" ]]; then echo "  OK      $s"; else echo "  MISSING $s"; fi
+done
+echo "  impeccable.style/designing · emilkowal.ski/skill · tasteskill.dev"

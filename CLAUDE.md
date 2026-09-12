@@ -8,6 +8,7 @@ This repo IS the Claude Team library — agents in `.claude/agents/claude-team/`
 - `description` drives auto-delegation — keep it trigger-rich ("Use for X, Y, Z. Reports to <lead>."), concrete, and short.
 - Model tiers: master = `inherit`; leads = `sonnet`; specialists = `sonnet`, mechanical roles = `haiku`. Justify any deviation in the PR/commit.
 - Every agent ends with an explicit output contract (STATUS · DELIVERABLES · VERIFICATION · DECISIONS · RISKS or role-appropriate variant).
+- Design/frontend agents route craft work through `docs/DESIGN-SKILLS.md` — that file is the single source of truth. Point at it; don't re-explain the routing inside an agent brief, and don't add a skill reference to an agent without adding its row there.
 - Leads must keep the dual-mode paragraph ("delegate when you can, execute when you must") — subagent nesting isn't guaranteed in every environment.
 - Adding/renaming an agent? Update BOTH roster tables: `.claude/skills/team/SKILL.md` and `.claude/agents/claude-team/master-orchestrator.md`, plus the managing lead's delegation list and `docs/ARCHITECTURE.md`.
 

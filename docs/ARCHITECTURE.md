@@ -17,7 +17,7 @@ flowchart TD
     MO --> SL[sales-lead<br/><i>sonnet</i>]
     MO --> LL[legal-lead<br/><i>sonnet</i>]
 
-    FE --> re[react-engineer] & us[ui-stylist<br/><i>haiku</i>]
+    FE --> re[react-engineer] & mo[motion-engineer] & us[ui-stylist<br/><i>haiku</i>]
     BE --> ae[api-engineer] & de[db-engineer]
     DO --> ce[ci-cd-engineer] & ie[infra-engineer]
     QA --> te[test-engineer] & ee[e2e-tester] & cr[code-reviewer]
@@ -49,6 +49,16 @@ Claude Code does not always allow a subagent to spawn its own subagents. The org
 
 Every lead's prompt handles both cases, so the same repo works across environments and Claude Code versions.
 
+## The design craft stack
+
+Three external skill packs — Impeccable, Emil Kowalski's design-engineering pack, and Tasteskill —
+give UI work a craft ceiling the base agents don't have on their own. They overlap, so routing is
+centralized in [DESIGN-SKILLS.md](DESIGN-SKILLS.md) rather than duplicated across agent briefs:
+product surfaces go to `impeccable`, landing pages to `design-taste-frontend`, motion and
+component feel to the Emil pack. Every UI work package carries a **craft directive** naming the
+one skill it is built under, and `qa-lead` / `code-reviewer` gate on the matching audit
+(`impeccable audit`, `review-animations`).
+
 ## Design principles
 
 - **Judgment up, typing down.** The expensive model decides and reviews; cheap models execute well-specified work.
@@ -62,14 +72,14 @@ Every lead's prompt handles both cases, so the same repo works across environmen
 ```
 ClaudeTeam/
 ├── .claude/
-│   ├── agents/claude-team/      # 32 agents, grouped by team
+│   ├── agents/claude-team/      # 33 agents, grouped by team
 │   │   ├── master-orchestrator.md
 │   │   ├── engineering/  design/  product/  marketing/  sales/  legal/
 │   └── skills/
 │       ├── team/SKILL.md        # /team — the orchestration protocol
 │       ├── retro/SKILL.md       # /retro — learn & patch the org
 │       └── hire/SKILL.md        # /hire — add agents in house format
-├── docs/                        # this file, MODEL-STRATEGY, INTEGRATIONS
+├── docs/                        # this file, MODEL-STRATEGY, INTEGRATIONS, DESIGN-SKILLS
 ├── install.sh                   # symlink/copy into a project or user-level
 └── README.md
 ```
